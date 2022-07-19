@@ -1,3 +1,3 @@
 LoadBalancer DNS Link to our Udagram Test Application:
 
-http://serve-webap-zxvca5jh15yl-143633056.us-west-2.elb.amazonaws.com/
+http://serve-webap-1pxfvug86qux2-793989903.us-west-2.elb.amazonaws.com/

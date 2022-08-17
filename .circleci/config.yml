@@ -33,7 +33,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: 
-        - name: "echo my_name environment variable"
+        name: "echo my_name environment variable"
         command: |
           eco $My_Name
 # Invoke jobs via workflows

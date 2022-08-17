@@ -1,42 +1,42 @@
-version: 2.1
-jobs:
-  print_hello:
-    docker:
-      - image: circleci/node:13.8.0
-    steps:
-      - run:
-        name: echo Hello
-  print_world:
-    docker:
-      - image: circleci/node:13.8.0
-    steps:
-      - run: echo World
-workflows:
-  say-hello-workflow:
-    jobs:
-      # - say-hello
-      - print_hello
-      - print_world:
-          requires:
-            - print_hello
 # version: 2.1
-# orbs:
-#   welcome: circleci/welcome-orb@0.4.1
 # jobs:
 #   print_hello:
 #     docker:
 #       - image: circleci/node:13.8.0
 #     steps:
-#       - run: echo hello
+#       - run:
+#         name: echo Hello
 #   print_world:
 #     docker:
 #       - image: circleci/node:13.8.0
 #     steps:
-#       - run: echo world
+#       - run: echo World
 # workflows:
-#   welcome:
+#   say-hello-workflow:
 #     jobs:
+#       # - say-hello
 #       - print_hello
 #       - print_world:
 #           requires:
 #             - print_hello
+version: 2.1
+orbs:
+  welcome: circleci/welcome-orb@0.4.1
+jobs:
+  print_hello:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run: echo hello
+  print_world:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run: echo world
+workflows:
+  welcome:
+    jobs:
+      - print_hello
+      - print_world:
+          requires:
+            - print_hello

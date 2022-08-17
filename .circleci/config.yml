@@ -21,13 +21,19 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: echo Hello
+      - run:
+          name: "say hello"
+          command: |       
+            echo Hello
   print_world:
     docker:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: echo World
+      - run:
+          name: "say world"
+          command: |      
+            echo World
   print_env_var:
     docker:
       - image: circleci/node:13.8.0

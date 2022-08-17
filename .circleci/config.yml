@@ -21,18 +21,15 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - checkout
+      # - checkout
       - run:
-        name: Say Hello
-        command: echo Hello
+        name: echo Hello
   print_world:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - checkout
-      - run:
-        name: Say World
-        command: echo World
+      # - checkout
+      - run: echo World
 
 
 # Invoke jobs via workflows

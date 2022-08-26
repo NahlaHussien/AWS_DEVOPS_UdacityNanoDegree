@@ -51,10 +51,8 @@ jobs:
       - run: 
           name: "output.txt"
           command: |
-            # mkdir -p workspace
             echo "text to output here" > output.txt
       - persist_to_workspace:
-          # root: workspace
           paths: 
             - output.txt
   print_output_file:

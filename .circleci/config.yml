@@ -4,7 +4,7 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 commands:
-  print_pipeline_id: 
+  print_pipeline_id:
     steps:
       - run: echo ${CIRCLE_WORKFLOW_ID}
 jobs:
@@ -80,7 +80,6 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - print_pipeline_id:
-          # to: $CIRCLE_wORKFLOW_ID
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:

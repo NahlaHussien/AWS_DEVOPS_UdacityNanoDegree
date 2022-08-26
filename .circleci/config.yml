@@ -108,7 +108,7 @@ jobs:
       - run: exit 1
       - run:
           name: on error
-          command: echo "Hello Effor!"
+          command: echo "Hello Fail Error!"
           when: on_fail
 
 # Invoke jobs via workflows

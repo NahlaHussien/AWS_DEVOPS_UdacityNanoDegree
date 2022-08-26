@@ -26,7 +26,7 @@ commands:
         type: string
     steps:
       # - run: echo ${CIRCLE_WORKFLOW_ID}
-      - run: echo <<parameters.id>>
+      - run: echo << parameters.id >>
 jobs:
   # say-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.

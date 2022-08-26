@@ -54,7 +54,7 @@ jobs:
             mkdir -p workspace
             echo "text to output here" > workspace/output.txt
       - persist_to_workspace:
-          root: workspace
+          # root: workspace
           paths: 
             - output.txt
   print_output_file:
@@ -64,7 +64,7 @@ jobs:
       # - checkout
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: /workspace
+          at: output.txt #/workspace
       - run: |
           # name: "print_output_file_contents"        
           # command: |   
